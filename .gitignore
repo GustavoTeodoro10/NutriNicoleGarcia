@@ -1,0 +1,17 @@
+# Raw/source media (large originals used only during asset processing)
+src/
+
+# Local dev tooling config
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Local server / misc
+*.log
+node_modules/

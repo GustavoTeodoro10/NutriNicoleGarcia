@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Nicole Garcia | Nutricionista Esportiva e Estética em Mauá e São Paulo</title>
+<meta name="description" content="Nutrição esportiva e estética com a Dra. Nicole Garcia (CRN-3 56925). Atendimento presencial em Mauá e São Paulo, e online para todo o Brasil. Emagrecimento, hipertrofia, performance, saúde clínica e longevidade." />
+<meta name="theme-color" content="#FBF6F1" />
+
+<link rel="icon" type="image/png" sizes="512x512" href="assets/img/favicon.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon-192.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png" />
+<link rel="apple-touch-icon" href="assets/img/favicon-192.png" />
+
+<meta property="og:title" content="Nicole Garcia | Nutricionista Esportiva e Estética" />
+<meta property="og:description" content="Nutrição que cuida do seu corpo e transforma sua rotina. Atendimento presencial em Mauá e São Paulo, e online para todo o Brasil e exterior." />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="assets/img/nicole-profile.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,380;0,9..144,480;0,9..144,560;1,9..144,420;1,9..144,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: "#FBF6F1",
+          creamdeep: "#F3E9E3",
+          ink: "#2A2420",
+          inksoft: "#5B4F46",
+          inkfaint: "#8C7F73",
+          gold: { deep: "#8A6F45", DEFAULT: "#AD8B5C", light: "#E3CE9C" },
+          rose: { DEFAULT: "#B98E8F", deep: "#7C4A4B" },
+          blush: "#F4E9E7"
+        },
+        fontFamily: {
+          display: ["Fraunces", "serif"],
+          sans: ["Manrope", "ui-sans-serif", "system-ui", "sans-serif"]
+        }
+      }
+    }
+  };
+</script>
+<link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+<a href="#conteudo" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[100] focus:bg-ink focus:text-cream focus:px-4 focus:py-2 focus:rounded-full">Pular para o conteúdo</a>
+
+<!-- ============ HEADER / NAV ============ -->
+<header id="site-header" class="fixed top-0 inset-x-0 z-40">
+  <div class="wrap flex items-center justify-between py-4">
+    <a href="#inicio" class="flex items-center gap-3 shrink-0" aria-label="Nicole Garcia — início">
+      <img src="assets/img/logo.png" alt="Nicole Garcia — Nutricionista Esportiva e Estética" class="h-12 md:h-14 w-auto" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-9" aria-label="Navegação principal">
+      <a href="#servicos" class="nav-link">Serviços</a>
+      <a href="#planos" class="nav-link">Planos</a>
+      <a href="#depoimentos" class="nav-link">Depoimentos</a>
+      <a href="#sobre" class="nav-link">Sobre</a>
+      <a href="#faq" class="nav-link">FAQ</a>
+      <a href="#contato" class="nav-link">Contato</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="#" data-wa-msg="Olá nutri, vim do site e gostaria de mais informações sobre o seu acompanhamento" class="hidden md:inline-flex btn btn-gold text-sm !px-5 !py-2.5">
+        Agendar consulta
+      </a>
+      <button id="mobile-nav-toggle" type="button" class="lg:hidden w-11 h-11 flex items-center justify-center rounded-full border border-ink/15" aria-label="Abrir menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV SHEET ============ -->
+<div id="mobile-nav" data-open="false" class="lg:hidden fixed inset-0 z-50 bg-ink/40" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+  <div id="mobile-nav-panel" class="absolute right-0 top-0 h-full w-[84%] max-w-sm bg-cream shadow-2xl flex flex-col">
+    <div class="flex items-center justify-between px-6 py-5 border-b border-ink/10">
+      <img src="assets/img/logo.png" alt="Nicole Garcia" class="h-10 w-auto" />
+      <button id="mobile-nav-close" type="button" class="w-10 h-10 flex items-center justify-center rounded-full border border-ink/15" aria-label="Fechar menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-1 px-6 py-8 text-lg font-display" aria-label="Navegação móvel">
+      <a href="#servicos" class="py-3 border-b border-ink/10">Serviços</a>
+      <a href="#planos" class="py-3 border-b border-ink/10">Planos</a>
+      <a href="#depoimentos" class="py-3 border-b border-ink/10">Depoimentos</a>
+      <a href="#sobre" class="py-3 border-b border-ink/10">Sobre</a>
+      <a href="#faq" class="py-3 border-b border-ink/10">FAQ</a>
+      <a href="#contato" class="py-3 border-b border-ink/10">Contato</a>
+    </nav>
+    <div class="mt-auto px-6 pb-10">
+      <a href="#" data-wa-msg="Olá nutri, vim do site e gostaria de mais informações sobre o seu acompanhamento" class="btn btn-whatsapp w-full">
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<main id="conteudo">
+
+<!-- ============ HERO ============ -->
+<section id="inicio" class="relative pt-36 pb-20 md:pt-44 md:pb-28 overflow-hidden">
+  <div aria-hidden="true" class="pointer-events-none absolute -top-24 -left-24 w-[26rem] h-[26rem] rounded-full bg-blush blur-3xl opacity-70"></div>
+  <div aria-hidden="true" class="pointer-events-none absolute top-1/3 -right-32 w-[30rem] h-[30rem] rounded-full bg-gold-light/40 blur-3xl"></div>
+
+  <div class="wrap relative grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-10 items-center">
+    <div>
+      <p class="kicker mb-5">Nutrição esportiva e estética</p>
+      <h1 class="headline text-[2.5rem] leading-[1.08] sm:text-6xl lg:text-[3.7rem]">
+        Nutrição que cuida do seu corpo e transforma a sua rotina.
+      </h1>
+      <p class="mt-6 text-lg text-inksoft max-w-xl leading-relaxed">
+        Acompanhamento nutricional individualizado com a Dra. Nicole Garcia — sem dietas restritivas, sem julgamentos, com escuta ativa em cada consulta.
+      </p>
+
+      <div class="mt-9 flex flex-wrap items-center gap-4">
+        <a href="#servicos" class="btn btn-gold">Conheça meu trabalho</a>
+        <a href="#" data-wa-msg="Olá nutri, vim do site e gostaria de mais informações sobre o seu acompanhamento" class="btn btn-whatsapp">
+          <svg width="19" height="19" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15.02c0 2.4.66 4.63 1.8 6.55L4 29l7.6-1.98a11.9 11.9 0 0 0 4.42.85h.01c6.62 0 12.01-5.38 12.01-12.02C28.04 8.4 22.65 3 16.02 3zm0 21.9h-.01a9.85 9.85 0 0 1-5.03-1.38l-.36-.21-4.5 1.18 1.2-4.39-.24-.45a9.85 9.85 0 0 1-1.5-5.24C5.58 9.48 10.24 4.9 16.02 4.9c2.63 0 5.1 1.03 6.96 2.89a9.75 9.75 0 0 1 2.88 6.93c0 5.45-4.66 9.98-9.84 9.98zm5.58-7.44c-.3-.15-1.78-.87-2.06-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.69-2.1-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <div class="mt-11 flex flex-wrap items-center gap-x-8 gap-y-4 text-sm">
+        <a href="https://share.google/nGhtEHOqb5UJkq2lh" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2.5 group">
+          <span class="stars text-base">★★★★★</span>
+          <span class="text-ink font-semibold">5,0</span>
+          <span class="text-inkfaint group-hover:text-ink transition-colors">82 avaliações no Google</span>
+        </a>
+        <div class="hidden sm:block w-px h-5 bg-ink/15"></div>
+        <p class="text-inkfaint"><span class="text-ink font-semibold">CRN-3</span> 56925</p>
+        <div class="hidden sm:block w-px h-5 bg-ink/15"></div>
+        <p class="text-inkfaint">Atendendo desde <span class="text-ink font-semibold">2019</span></p>
+      </div>
+    </div>
+
+    <div class="relative mx-auto w-full max-w-sm lg:max-w-none">
+      <div class="hero-frame">
+        <div class="hero-shape aspect-[4/5] float-soft">
+          <img src="assets/img/nicole-profile.jpg" alt="Dra. Nicole Garcia, nutricionista esportiva e estética" class="w-full h-full object-cover" loading="eager" />
+        </div>
+      </div>
+      <div aria-hidden="true" class="absolute -bottom-6 -left-6 sm:-left-10 bg-white rounded-2xl shadow-soft px-5 py-4 border border-ink/10 max-w-[13rem]">
+        <p class="font-display italic text-lg leading-snug">"Sem restrições desnecessárias."</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section id="servicos" class="section-pad bg-white">
+  <div class="wrap">
+    <div class="reveal max-w-2xl">
+      <p class="kicker mb-3">O que você busca?</p>
+      <h2 class="headline text-3xl sm:text-4xl lg:text-[2.75rem]">Um cuidado nutricional para cada objetivo</h2>
+    </div>
+
+    <div class="mt-14 grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-16 items-start reveal">
+
+      <div role="tablist" aria-label="Áreas de atuação">
+        <button class="service-tab active" data-target="panel-longevidade" role="tab" aria-selected="true">
+          <span class="num">01</span>
+          <span class="label">Longevidade</span>
+        </button>
+        <button class="service-tab" data-target="panel-hipertrofia" role="tab" aria-selected="false">
+          <span class="num">02</span>
+          <span class="label">Hipertrofia</span>
+        </button>
+        <button class="service-tab" data-target="panel-performance" role="tab" aria-selected="false">
+          <span class="num">03</span>
+          <span class="label">Performance esportiva</span>
+        </button>
+        <button class="service-tab" data-target="panel-clinica" role="tab" aria-selected="false">
+          <span class="num">04</span>
+          <span class="label">Saúde clínica</span>
+        </button>
+        <button class="service-tab" data-target="panel-emagrecimento" role="tab" aria-selected="false">
+          <span class="num">05</span>
+          <span class="label">Emagrecimento</span>
+        </button>
+      </div>
+
+      <div>
+        <div id="panel-longevidade" class="service-panel active">
+          <div class="grid sm:grid-cols-[1fr_1.1fr] gap-6 items-center">
+            <div class="card-photo aspect-[4/3]">
+              <img src="assets/img/cat-longevidade.jpg" alt="Casal de idosos praticando atividade física ao ar livre" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="font-display text-2xl mb-3">Longevidade</h3>
+              <p class="text-inksoft leading-relaxed">Preservação de massa magra, mais energia, sono de qualidade e prevenção de doenças.</p>
+              <a href="#" data-wa-msg="Olá Nicole! Vim pelo site e tenho interesse em um acompanhamento com foco em Longevidade." class="mt-5 inline-flex items-center gap-2 text-rose-deep font-semibold hover:gap-3 transition-all">
+                Falar sobre Longevidade
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-hipertrofia" class="service-panel">
+          <div class="grid sm:grid-cols-[1fr_1.1fr] gap-6 items-center">
+            <div class="card-photo aspect-[4/3]">
+              <img src="assets/img/cat-hipertrofia.jpg" alt="Treino de musculação com pesos em academia" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="font-display text-2xl mb-3">Hipertrofia</h3>
+              <p class="text-inksoft leading-relaxed">Nutrição voltada para o aumento de massa muscular. Hipertrofia com estratégia.</p>
+              <a href="#" data-wa-msg="Olá Nicole! Vim pelo site e tenho interesse em um acompanhamento com foco em Hipertrofia." class="mt-5 inline-flex items-center gap-2 text-rose-deep font-semibold hover:gap-3 transition-all">
+                Falar sobre Hipertrofia
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-performance" class="service-panel">
+          <div class="grid sm:grid-cols-[1fr_1.1fr] gap-6 items-center">
+            <div class="card-photo aspect-[4/3]">
+              <img src="assets/img/cat-performance.jpg" alt="Corredora em pista de atletismo" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="font-display text-2xl mb-3">Performance esportiva</h3>
+              <p class="text-inksoft leading-relaxed">Estratégia nutricional focada no aumento do desempenho nos treinos e na otimização dos resultados, seja nas sessões diárias, em provas, desafios ou metas pessoais.</p>
+              <a href="#" data-wa-msg="Olá Nicole! Vim pelo site e tenho interesse em um acompanhamento com foco em Performance esportiva." class="mt-5 inline-flex items-center gap-2 text-rose-deep font-semibold hover:gap-3 transition-all">
+                Falar sobre Performance
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-clinica" class="service-panel">
+          <div class="grid sm:grid-cols-[1fr_1.1fr] gap-6 items-center">
+            <div class="card-photo aspect-[4/3]">
+              <img src="assets/img/cat-saude-clinica.jpg" alt="Alimentação equilibrada para saúde clínica" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="font-display text-2xl mb-3">Saúde clínica</h3>
+              <p class="text-inksoft leading-relaxed">A nutrição como aliada no cuidado e controle de condições como hipertensão, diabetes, esteatose hepática, distúrbios intestinais e doenças autoimunes.</p>
+              <a href="#" data-wa-msg="Olá Nicole! Vim pelo site e tenho interesse em um acompanhamento com foco em Saúde clínica." class="mt-5 inline-flex items-center gap-2 text-rose-deep font-semibold hover:gap-3 transition-all">
+                Falar sobre Saúde clínica
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="panel-emagrecimento" class="service-panel">
+          <div class="grid sm:grid-cols-[1fr_1.1fr] gap-6 items-center">
+            <div class="card-photo aspect-[4/3]">
+              <img src="assets/img/cat-emagrecimento.jpg" alt="Balança para acompanhamento de emagrecimento" class="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div>
+              <h3 class="font-display text-2xl mb-3">Emagrecimento</h3>
+              <p class="text-inksoft leading-relaxed">Acompanhamento nutricional para redução de gordura com foco na preservação de massa magra.</p>
+              <a href="#" data-wa-msg="Olá Nicole! Vim pelo site e tenho interesse em um acompanhamento com foco em Emagrecimento." class="mt-5 inline-flex items-center gap-2 text-rose-deep font-semibold hover:gap-3 transition-all">
+                Falar sobre Emagrecimento
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FILOSOFIA ============ -->
+<section id="filosofia" class="section-pad bg-blush">
+  <div class="wrap">
+    <div class="reveal max-w-2xl mx-auto text-center">
+      <p class="kicker mb-3">Mais saúde e qualidade de vida</p>
+      <h2 class="headline text-3xl sm:text-4xl lg:text-[2.6rem]">Para quem quer viver com saúde, qualidade e autonomia por mais tempo</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-2 gap-8 md:gap-14 max-w-4xl mx-auto">
+      <div class="reveal">
+        <h3 class="font-display text-xl mb-2 text-gold-deep">Aqui você encontra</h3>
+        <ul>
+          <li class="check-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Bioimpedância e adipometria</span>
+          </li>
+          <li class="check-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Suplementação personalizada</span>
+          </li>
+          <li class="check-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Plano alimentar livre de privações malucas</span>
+          </li>
+          <li class="check-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Suporte diário</span>
+          </li>
+          <li class="check-item !border-b-0">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg></span>
+            <span>Ambiente acolhedor</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="reveal">
+        <h3 class="font-display text-xl mb-2 text-rose-deep">Aqui você NÃO encontra</h3>
+        <ul>
+          <li class="cross-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+            <span>Dietas restritivas e dietas prontas</span>
+          </li>
+          <li class="cross-item">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+            <span>Falta de comunicação e respeito</span>
+          </li>
+          <li class="cross-item !border-b-0">
+            <span class="mark"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></span>
+            <span>Julgamentos e egoísmo</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PLANOS / OFERTA ============ -->
+<section id="planos" class="section-pad bg-white">
+  <div class="wrap">
+    <div class="reveal max-w-2xl mx-auto text-center">
+      <p class="kicker mb-3">Formatos de acompanhamento</p>
+      <h2 class="headline text-3xl sm:text-4xl lg:text-[2.6rem]">Escolha como quer começar</h2>
+      <p class="mt-4 text-inksoft leading-relaxed">Todo acompanhamento começa com escuta ativa e um plano alimentar sem restrições desnecessárias.</p>
+    </div>
+
+    <div class="mt-16 grid md:grid-cols-3 gap-7 md:gap-6 max-w-5xl mx-auto items-center reveal-stagger">
+
+      <div class="plan-card">
+        <p class="kicker !text-inkfaint !not-italic text-sm font-semibold tracking-wide">Sessão pontual</p>
+        <h3 class="font-display text-2xl mt-2 mb-4">Uma consulta avulsa</h3>
+        <p class="text-inksoft leading-relaxed mb-8">Para tirar dúvidas, revisar sua estratégia atual ou dar o primeiro passo com orientação profissional.</p>
+        <a href="#" data-wa-msg="Olá, vi o site e tenho interesse na Sessão Pontual e gostaria de mais informações." class="btn btn-ghost-rose w-full">Quero uma sessão pontual</a>
+      </div>
+
+      <div class="plan-card featured text-center md:text-left">
+        <span class="inline-block bg-gold-light text-gold-deep text-xs font-bold px-3 py-1.5 rounded-full mb-4">Formato recomendado</span>
+        <p class="kicker !text-gold-deep !not-italic text-sm font-semibold tracking-wide">Plano de 90 dias</p>
+        <h3 class="font-display text-2xl mt-2 mb-4">Acompanhamento contínuo</h3>
+        <p class="text-inksoft leading-relaxed mb-8">Plano alimentar personalizado, ajustes de rota e suporte diário para consolidar resultados reais.</p>
+        <a href="#" data-wa-msg="Olá, vi o site e tenho interesse no Plano de 90 dias..." class="btn btn-gold w-full">Quero o plano de 90 dias</a>
+      </div>
+
+      <div class="plan-card">
+        <p class="kicker !text-inkfaint !not-italic text-sm font-semibold tracking-wide">Plano de 180 dias</p>
+        <h3 class="font-display text-2xl mt-2 mb-4">Jornada completa</h3>
+        <p class="text-inksoft leading-relaxed mb-8">Para transformar hábitos, sustentar performance e manter resultados no longo prazo.</p>
+        <a href="#" data-wa-msg="Olá, vi o site e tenho interesse no Plano de 180 dias..." class="btn btn-ghost-rose w-full">Quero o plano de 180 dias</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA SOCIAL — GOOGLE ============ -->
+<section id="depoimentos" class="section-pad bg-creamdeep overflow-hidden">
+  <div class="wrap">
+    <div class="reveal flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
+      <div class="max-w-xl">
+        <p class="kicker mb-3">Prova social</p>
+        <h2 class="headline text-3xl sm:text-4xl lg:text-[2.6rem]">O que dizem no Google</h2>
+      </div>
+      <a href="https://share.google/nGhtEHOqb5UJkq2lh" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white border border-ink/10 rounded-2xl px-6 py-4 shrink-0 hover:border-gold transition-colors">
+        <svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        <div class="text-left">
+          <p class="stars text-sm leading-none">★★★★★</p>
+          <p class="text-sm font-semibold mt-1">5,0 · 82 avaliações</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="marquee-viewport reveal">
+    <div class="marquee-track">
+
+      <article class="review-card">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Tive uma experiência excelente com a nutricionista Nicole! Desde o primeiro atendimento, ela foi extremamente atenciosa, acolhedora e demonstrou muito conhecimento na área."</p>
+        <p class="font-display text-lg">Larissa Lopes</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 7 meses atrás</p>
+      </article>
+
+      <article class="review-card">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"A Nicole é uma profissional fantástica! Ela me escuta sem julgamentos e tem me ajudado demais no emagrecimento e na reeducação alimentar."</p>
+        <p class="font-display text-lg">Thaís Silva</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 3 meses atrás</p>
+      </article>
+
+      <article class="review-card">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Muito atenciosa e organizada, preocupada com o verdadeiro valor de uma reeducação alimentar, que não é tão sacrificante: a dieta é feita para ter saúde e qualidade de vida."</p>
+        <p class="font-display text-lg">Marlene Freire</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 7 meses atrás</p>
+      </article>
+
+      <article class="review-card">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48" aria-hidden="true"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Ter a Nicole como nutricionista é ter a certeza de que seu investimento trará mais do que resultados físicos. Ela acolhe e mostra que o ambiente é seguro para recomeçar."</p>
+        <p class="font-display text-lg">Larissa Duarte</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 1 ano atrás</p>
+      </article>
+
+      <!-- duplicate set for seamless loop -->
+      <article class="review-card" aria-hidden="true">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Tive uma experiência excelente com a nutricionista Nicole! Desde o primeiro atendimento, ela foi extremamente atenciosa, acolhedora e demonstrou muito conhecimento na área."</p>
+        <p class="font-display text-lg">Larissa Lopes</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 7 meses atrás</p>
+      </article>
+      <article class="review-card" aria-hidden="true">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"A Nicole é uma profissional fantástica! Ela me escuta sem julgamentos e tem me ajudado demais no emagrecimento e na reeducação alimentar."</p>
+        <p class="font-display text-lg">Thaís Silva</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 3 meses atrás</p>
+      </article>
+      <article class="review-card" aria-hidden="true">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Muito atenciosa e organizada, preocupada com o verdadeiro valor de uma reeducação alimentar, que não é tão sacrificante: a dieta é feita para ter saúde e qualidade de vida."</p>
+        <p class="font-display text-lg">Marlene Freire</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 7 meses atrás</p>
+      </article>
+      <article class="review-card" aria-hidden="true">
+        <div class="flex items-center justify-between mb-4">
+          <p class="stars">★★★★★</p>
+          <svg width="18" height="18" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.6 15.9 19 13 24 13c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 16.3 4 9.6 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.3 0 10.2-2 13.9-5.4l-6.4-5.4C29.4 34.9 26.8 36 24 36c-5.3 0-9.7-3.1-11.3-7.5l-6.6 5.1C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.1-4 5.6l6.4 5.4C39.9 37.1 44 31.3 44 24c0-1.3-.1-2.7-.4-3.5z"/></svg>
+        </div>
+        <p class="text-inksoft leading-relaxed mb-5">"Ter a Nicole como nutricionista é ter a certeza de que seu investimento trará mais do que resultados físicos. Ela acolhe e mostra que o ambiente é seguro para recomeçar."</p>
+        <p class="font-display text-lg">Larissa Duarte</p>
+        <p class="text-sm text-inkfaint">Avaliação no Google · 1 ano atrás</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section id="sobre" class="section-pad bg-white">
+  <div class="wrap grid lg:grid-cols-[0.8fr_1.2fr] gap-14 items-center">
+
+    <div class="reveal relative mx-auto max-w-sm lg:max-w-none">
+      <div class="card-photo aspect-[3/4]">
+        <img src="assets/img/nicole-portrait-2.jpg" alt="Dra. Nicole Garcia em seu consultório" class="w-full h-full object-cover object-top" loading="lazy" />
+      </div>
+      <div aria-hidden="true" class="absolute -top-6 -right-6 w-28 h-28 rounded-full border border-gold hidden md:block"></div>
+    </div>
+
+    <div class="reveal">
+      <p class="kicker mb-3">Sobre a nutricionista</p>
+      <h2 class="headline text-3xl sm:text-4xl mb-2">Dra. Nicole Garcia</h2>
+      <p class="text-inkfaint mb-8">CRN-3: 56925 · Bacharel em Nutrição · Pós-graduação em Nutrição Esportiva e Estética · Pós-graduanda em Nutrição Materno-Infantil e Nutrição Clínica</p>
+
+      <blockquote class="pull-quote text-2xl sm:text-3xl mb-8 border-l-2 border-gold pl-6">
+        "Minha vocação para a nutrição surgiu através do desejo de ajudar pessoas a se sentirem melhor ao se olhar no espelho, e a mostrar que a alimentação saudável não precisa ser um bicho de 7 cabeças."
+      </blockquote>
+
+      <p class="text-inksoft leading-relaxed mb-6">Cada consulta é feita com escuta ativa, onde o principal foco é o paciente e sua rotina, dificuldades e objetivos. A prioridade é solucionar os problemas de uma forma real e possível, sem restrições desnecessárias.</p>
+
+      <div class="grid sm:grid-cols-2 gap-5 mb-8">
+        <div class="border-l-2 border-ink/10 pl-4">
+          <p class="font-display text-lg">2019</p>
+          <p class="text-sm text-inkfaint">Início dos atendimentos, em Mauá</p>
+        </div>
+        <div class="border-l-2 border-ink/10 pl-4">
+          <p class="font-display text-lg">2024</p>
+          <p class="text-sm text-inkfaint">Consultório próprio no centro da cidade</p>
+        </div>
+      </div>
+
+      <p class="font-display italic text-xl text-gold-deep">"Não desistir é o que vai te fazer conquistar tudo o que sempre sonhou!"</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section id="faq" class="section-pad bg-creamdeep">
+  <div class="wrap grid lg:grid-cols-[0.7fr_1.3fr] gap-14">
+    <div class="reveal">
+      <p class="kicker mb-3">Perguntas frequentes</p>
+      <h2 class="headline text-3xl sm:text-4xl">Tudo o que você precisa saber antes de começar</h2>
+    </div>
+
+    <div class="reveal">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Como a NG Nutrição Esportiva e Estética nasceu?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Tudo começou em 2019, quando após a formação, comecei a fazer atendimentos na garagem da casa dos meus pais em um bairro de Mauá, pois não queria esperar muito para iniciar o meu trabalho como nutricionista. Até que em 2024 iniciei os atendimentos em um consultório no centro da cidade, em um prédio comercial. Ao longo desses anos, ajudei centenas de pessoas a alcançarem seus objetivos de emagrecer, ganhar massa muscular, melhorar a saúde e qualidade de vida!</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Como funciona a consulta presencial?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Na consulta presencial, é feita a avaliação física completa com bioimpedância, adipometria, circunferências corporais e fotos evolutivas.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Como funciona a consulta online?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Na consulta online, é feita a avaliação do IMC e também das fotos evolutivas, caso o paciente se sinta à vontade.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Quais os demais procedimentos realizados?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Avalio exames laboratoriais e solicito caso não tenha exames recentes; prescrevo suplementação personalizada e suplementos manipulados de acordo com cada necessidade; e dou acesso a um aplicativo exclusivo que reúne todas as informações do paciente: plano alimentar e substitutos, diário alimentar, lista de compras, orientações nutricionais, entre outros.</div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">
+          <span>Qual o propósito da NG Nutrição Esportiva e Estética?</span>
+          <span class="faq-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <div class="faq-a-inner">Meu propósito é continuar transformando vidas através da nutrição real, e mostrar para as pessoas que é possível comer saudável de forma prazerosa e sem restrições.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section id="contato" class="section-pad bg-white">
+  <div class="wrap">
+    <div class="reveal grid lg:grid-cols-[1fr_1fr] gap-14 items-center bg-ink rounded-[2rem] p-10 sm:p-14 lg:p-16 overflow-hidden relative">
+      <div aria-hidden="true" class="pointer-events-none absolute -bottom-32 -right-32 w-96 h-96 rounded-full bg-gold-deep/20 blur-3xl"></div>
+
+      <div class="relative">
+        <p class="kicker !text-gold-light mb-3">Vamos conversar?</p>
+        <h2 class="headline text-3xl sm:text-4xl text-cream mb-5">Vem comigo chegar na sua melhor versão!</h2>
+        <p class="text-cream/70 leading-relaxed mb-2">Atendimento presencial em Mauá – SP e São Paulo – SP.</p>
+        <p class="text-cream/70 leading-relaxed mb-8">Atendimento online em todo o Brasil e exterior.</p>
+        <a href="#" data-wa-msg="Olá nutri, vim do site e gostaria de mais informações sobre o seu acompanhamento" class="btn btn-whatsapp">
+          <svg width="19" height="19" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.02 3C9.4 3 4 8.38 4 15.02c0 2.4.66 4.63 1.8 6.55L4 29l7.6-1.98a11.9 11.9 0 0 0 4.42.85h.01c6.62 0 12.01-5.38 12.01-12.02C28.04 8.4 22.65 3 16.02 3zm0 21.9h-.01a9.85 9.85 0 0 1-5.03-1.38l-.36-.21-4.5 1.18 1.2-4.39-.24-.45a9.85 9.85 0 0 1-1.5-5.24C5.58 9.48 10.24 4.9 16.02 4.9c2.63 0 5.1 1.03 6.96 2.89a9.75 9.75 0 0 1 2.88 6.93c0 5.45-4.66 9.98-9.84 9.98zm5.58-7.44c-.3-.15-1.78-.87-2.06-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.69-2.1-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <div class="relative grid gap-4">
+        <a href="tel:+5511952489846" class="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-colors border border-white/10 rounded-2xl px-5 py-4">
+          <span class="w-10 h-10 rounded-full bg-gold-light/15 flex items-center justify-center shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3CE9C" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </span>
+          <div>
+            <p class="text-xs text-cream/50">WhatsApp</p>
+            <p class="text-cream font-semibold">+55 11 95248-9846</p>
+          </div>
+        </a>
+
+        <a href="mailto:nicolesantos.nutri@gmail.com" class="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-colors border border-white/10 rounded-2xl px-5 py-4">
+          <span class="w-10 h-10 rounded-full bg-gold-light/15 flex items-center justify-center shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3CE9C" stroke-width="1.8"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </span>
+          <div>
+            <p class="text-xs text-cream/50">E-mail</p>
+            <p class="text-cream font-semibold break-all">nicolesantos.nutri@gmail.com</p>
+          </div>
+        </a>
+
+        <a href="https://www.google.com/maps/search/?api=1&query=R.+Campos+Sales%2C+167+-+Vila+Bocaina%2C+Mau%C3%A1+-+SP%2C+09310-040" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-colors border border-white/10 rounded-2xl px-5 py-4">
+          <span class="w-10 h-10 rounded-full bg-gold-light/15 flex items-center justify-center shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3CE9C" stroke-width="1.8"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </span>
+          <div>
+            <p class="text-xs text-cream/50">Endereço</p>
+            <p class="text-cream font-semibold">R. Campos Sales, 167 – Vila Bocaina, Mauá – SP</p>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/nutrinicolegarcia/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-colors border border-white/10 rounded-2xl px-5 py-4">
+          <span class="w-10 h-10 rounded-full bg-gold-light/15 flex items-center justify-center shrink-0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3CE9C" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </span>
+          <div>
+            <p class="text-xs text-cream/50">Instagram</p>
+            <p class="text-cream font-semibold">@nutrinicolegarcia</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="bg-ink text-cream/80 pt-16 pb-8">
+  <div class="wrap">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+      <div>
+        <img src="assets/img/logo.png" alt="Nicole Garcia — Nutricionista Esportiva e Estética" class="h-14 w-auto mb-4 brightness-0 invert opacity-90" />
+        <p class="text-sm text-cream/50 leading-relaxed max-w-xs">Nutrição esportiva e estética com escuta ativa, sem dietas restritivas e sem julgamentos.</p>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg text-cream mb-4">Contato</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="tel:+5511952489846" class="hover:text-gold-light transition-colors">+55 11 95248-9846</a></li>
+          <li><a href="mailto:nicolesantos.nutri@gmail.com" class="hover:text-gold-light transition-colors break-all">nicolesantos.nutri@gmail.com</a></li>
+          <li class="text-cream/60">R. Campos Sales, 167 – Vila Bocaina, Mauá – SP, 09310-040</li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg text-cream mb-4">Navegação</h3>
+        <ul class="space-y-2.5 text-sm">
+          <li><a href="#servicos" class="hover:text-gold-light transition-colors">Serviços</a></li>
+          <li><a href="#planos" class="hover:text-gold-light transition-colors">Planos</a></li>
+          <li><a href="#depoimentos" class="hover:text-gold-light transition-colors">Depoimentos</a></li>
+          <li><a href="#sobre" class="hover:text-gold-light transition-colors">Sobre</a></li>
+          <li><a href="#faq" class="hover:text-gold-light transition-colors">FAQ</a></li>
+          <li><a href="#contato" class="hover:text-gold-light transition-colors">Contato</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display text-lg text-cream mb-4">Redes sociais</h3>
+        <div class="flex items-center gap-3">
+          <a href="https://www.instagram.com/nutrinicolegarcia/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Nicole Garcia" class="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-light hover:text-gold-light transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          </a>
+          <a href="https://www.facebook.com/nutri.nicolesantos/" target="_blank" rel="noopener noreferrer" aria-label="Facebook de Nicole Garcia" class="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-light hover:text-gold-light transition-colors">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://share.google/nGhtEHOqb5UJkq2lh" target="_blank" rel="noopener noreferrer" aria-label="Avaliações de Nicole Garcia no Google" class="w-11 h-11 rounded-full border border-white/15 flex items-center justify-center hover:border-gold-light hover:text-gold-light transition-colors">
+            <svg width="16" height="16" viewBox="0 0 48 48"><path fill="currentColor" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.9 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.5 6.1 29.5 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.7-.4-3.5z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-col items-center gap-4 text-center">
+      <p class="text-sm text-cream/50">© <span id="year">2026</span> Nicole Garcia - Todos os direitos reservados.</p>
+      <p class="text-xs text-cream/35">Site desenvolvido por TeoCode · © 2026 TeoCode</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a href="#" data-wa-msg="Olá nutri, vim do site e gostaria de mais informações sobre o seu acompanhamento" class="wa-float" aria-label="Falar no WhatsApp">
+  <svg width="27" height="27" viewBox="0 0 32 32" fill="#fff" style="position:relative; z-index:1"><path d="M16.02 3C9.4 3 4 8.38 4 15.02c0 2.4.66 4.63 1.8 6.55L4 29l7.6-1.98a11.9 11.9 0 0 0 4.42.85h.01c6.62 0 12.01-5.38 12.01-12.02C28.04 8.4 22.65 3 16.02 3zm0 21.9h-.01a9.85 9.85 0 0 1-5.03-1.38l-.36-.21-4.5 1.18 1.2-4.39-.24-.45a9.85 9.85 0 0 1-1.5-5.24C5.58 9.48 10.24 4.9 16.02 4.9c2.63 0 5.1 1.03 6.96 2.89a9.75 9.75 0 0 1 2.88 6.93c0 5.45-4.66 9.98-9.84 9.98zm5.58-7.44c-.3-.15-1.78-.87-2.06-.97-.28-.1-.48-.15-.68.15-.2.3-.78.97-.96 1.17-.18.2-.35.22-.65.07-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.79-1.69-2.1-.18-.3-.02-.46.13-.61.14-.14.3-.35.45-.53.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.68-1.64-.93-2.24-.24-.58-.5-.5-.68-.51h-.58c-.2 0-.53.08-.8.38-.28.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.13 3.25 5.16 4.56.72.31 1.28.5 1.72.64.72.23 1.38.2 1.9.12.58-.09 1.78-.73 2.03-1.43.25-.7.25-1.3.18-1.43-.07-.13-.27-.2-.57-.35z"/></svg>
+</a>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>

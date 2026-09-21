@@ -1,0 +1,12 @@
+{
+  "name": "nicole-garcia-nutricionista",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Site institucional da Nicole Garcia — Nutricionista Esportiva e Estética. Desenvolvido por TeoCode.",
+  "scripts": {
+    "dev": "npx serve . -l 5500",
+    "dev:python": "python -m http.server 5500"
+  },
+  "author": "TeoCode",
+  "license": "UNLICENSED"
+}
